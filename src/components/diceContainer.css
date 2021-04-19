@@ -1,0 +1,4 @@
+.diceContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
