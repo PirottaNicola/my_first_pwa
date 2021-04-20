@@ -3,7 +3,7 @@ import DiceContainer from './components/diceContainer';
 function App() {
   return (
     <div className='App'>
-      <h1>D&D Dices Thrower Online</h1>
+      <h1 className='Titolo'>Charismatic Dice Thrower</h1>
       <br></br>
       <DiceContainer />
     </div>

@@ -27,15 +27,17 @@
   background-color: rgb(243, 75, 75);
   border-radius: 0.5rem;
   margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .dice_rolling h3,
 .dice_not_rolling h3 {
-  color: rgb(243, 75, 75);
+  color: #f34b4b;
   font-size: xxx-large;
   padding: 2rem;
   font-weight: bold;
   border-radius: 1rem;
   margin: 0;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .dice_rolling h3 {
