@@ -3,7 +3,7 @@ import './Dice.css';
 import { Howl } from 'howler';
 //importo TUUUUUUUTTI gli audio dei dadi
 import d4_1 from '../audio/d4_1.mp3';
-import d20_20 from '../audio/d20_20.m4a';
+import d20_20 from '../audio/d20_20.mp3';
 
 class Dice extends React.Component {
 
@@ -24,9 +24,10 @@ class Dice extends React.Component {
             return new Promise((resolve) => setTimeout(resolve, time));
         }
         //modifica stato Dado e la callback riproduce il suono
+        const n = Math.random();
         this.setState(
             {
-                valore_dado: (Math.round(Math.random() * (this.state.tipo_dado - 1))) + 1, // -1 e +1 per non ottenere 0
+                valore_dado : ((Math.floor(n*this.state.tipo_dado) + 1)) !== (this.state.tipo_dado + 1) ? (Math.floor(n*this.state.tipo_dado) + 1) : this.state.tipo_dado, //nel caso uscisse 1 dal math random, col +1 andrebbe oltre, per questo l'operazione ternaria
                 rolling: true
             }, () => {
                 var sound;
