@@ -6,6 +6,7 @@ import d4_1 from '../audio/d4_1.mp3';
 import d20_20 from '../audio/d20_20.mp3';
 import d20_19 from '../audio/d20_19.mp3';
 import d20_9 from '../audio/d20_9.mp3';
+import d10_10 from '../audio/d10_10.mp3';
 
 class Dice extends React.Component {
 
@@ -78,6 +79,10 @@ class Dice extends React.Component {
                                 sound = new Howl({ src: d20_9 });
                                 sound.play();
                                 break;
+                            case 10:
+                                sound = new Howl({ src: d10_10 });
+                                sound.play();
+                                break;
 
                             default:
                                 break;
@@ -106,6 +111,10 @@ class Dice extends React.Component {
                                 break;
                             case 9:
                                 sound = new Howl({ src: d20_9 });
+                                sound.play();
+                                break;
+                            case 10:
+                                sound = new Howl({ src: d10_10 });
                                 sound.play();
                                 break;
                             case 19:
