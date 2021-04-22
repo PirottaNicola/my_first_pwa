@@ -4,7 +4,8 @@ import { Howl } from 'howler';
 //importo TUUUUUUUTTI gli audio dei dadi
 import d4_1 from '../audio/d4_1.mp3';
 import d20_20 from '../audio/d20_20.mp3';
-import d20_19 from '../audio/d20_19.mp3'
+import d20_19 from '../audio/d20_19.mp3';
+import d20_9 from '../audio/d20_9.mp3';
 
 class Dice extends React.Component {
 
@@ -28,7 +29,7 @@ class Dice extends React.Component {
         const n = Math.random();
         this.setState(
             {
-                valore_dado : ((Math.floor(n*this.state.tipo_dado) + 1)) !== (this.state.tipo_dado + 1) ? (Math.floor(n*this.state.tipo_dado) + 1) : this.state.tipo_dado, //nel caso uscisse 1 dal math random, col +1 andrebbe oltre, per questo l'operazione ternaria
+                valore_dado: ((Math.floor(n * this.state.tipo_dado) + 1)) !== (this.state.tipo_dado + 1) ? (Math.floor(n * this.state.tipo_dado) + 1) : this.state.tipo_dado, //nel caso uscisse 1 dal math random, col +1 andrebbe oltre, per questo l'operazione ternaria
                 // valore_dado : 19, //testing audio
                 rolling: true
             }, () => {
@@ -73,6 +74,10 @@ class Dice extends React.Component {
                                 sound = new Howl({ src: d4_1 });
                                 sound.play();
                                 break;
+                            case 9:
+                                sound = new Howl({ src: d20_9 });
+                                sound.play();
+                                break;
 
                             default:
                                 break;
@@ -84,6 +89,10 @@ class Dice extends React.Component {
                                 sound = new Howl({ src: d4_1 });
                                 sound.play();
                                 break;
+                            case 9:
+                                sound = new Howl({ src: d20_9 });
+                                sound.play();
+                                break;
 
                             default:
                                 break;
@@ -93,6 +102,10 @@ class Dice extends React.Component {
                         switch (this.state.valore_dado) {
                             case 1:
                                 sound = new Howl({ src: d4_1 });
+                                sound.play();
+                                break;
+                            case 9:
+                                sound = new Howl({ src: d20_9 });
                                 sound.play();
                                 break;
                             case 19:
