@@ -7,7 +7,7 @@ import d20_20 from '../audio/d20_20.mp3';
 import d20_19 from '../audio/d20_19.mp3';
 import d20_9 from '../audio/d20_9.mp3';
 import d10_10 from '../audio/d10_10.mp3';
-
+import d20_1 from '../audio/d20_1.mp3';
 class Dice extends React.Component {
 
     //definisco costruttore e stato
@@ -106,7 +106,7 @@ class Dice extends React.Component {
                     case "20":
                         switch (this.state.valore_dado) {
                             case 1:
-                                sound = new Howl({ src: d4_1 });
+                                sound = new Howl({ src: d20_1 });
                                 sound.play();
                                 break;
                             case 9:
