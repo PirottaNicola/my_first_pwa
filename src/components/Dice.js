@@ -21,7 +21,7 @@ class Dice extends React.Component {
 
   //definisco la mia funzione che modifica il valore dello stato
   //da chiamare onclick
-  rollDice = () => {
+  diceThrow = () => {
     function sleep(time) {
       return new Promise((resolve) => setTimeout(resolve, time))
     }
@@ -135,10 +135,10 @@ class Dice extends React.Component {
           default:
             break
         }
+        // send the value of the dice to the parent component
+        this.props.onDiceThrow(this.state.valore_dado)
       }
-    ),
-      this.props.onDiceRoll(this.state.valore_dado) // assuming `onDiceRoll` is the callback prop
-
+    )
     sleep(1000).then(() => {
       //have to sleep the same amount of time of animation duration
       this.setState({ rolling: false })
@@ -150,7 +150,7 @@ class Dice extends React.Component {
     return (
       <div
         className={this.state.rolling ? 'dice_rolling' : 'dice_not_rolling'}
-        onClick={this.rollDice}
+        onClick={this.diceThrow}
         tipo_dado={this.state.tipo_dado}
       >
         <p>d {this.props.tipo_dado}</p>
