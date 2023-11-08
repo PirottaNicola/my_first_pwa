@@ -1,5 +1,4 @@
 import React from 'react'
-import BoxRisultati from './BoxRisultati'
 import Dice from './Dice'
 import './diceContainer.css'
 
