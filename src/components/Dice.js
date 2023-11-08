@@ -154,7 +154,7 @@ class Dice extends React.Component {
         tipo_dado={this.state.tipo_dado}
       >
         <p>d {this.props.tipo_dado}</p>
-        <h3> {this.state.valore_dado} </h3>
+        <h3> {this.props.clearDice ? '?' : this.state.valore_dado} </h3>
         <audio href={this.state.audio_url}></audio>
       </div>
     )

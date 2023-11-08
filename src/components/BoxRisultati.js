@@ -1,10 +1,10 @@
 import './BoxRisultati.css'
 
-function BoxRisultati(props) {
+function BoxRisultati({ risultati_passati }) {
   // array contenente il valore dei dadi tirati fino ad ora
   let stringa_risultati = ''
-  if (props.risultati_passati) {
-    for (const value of props.risultati_passati) {
+  if (risultati_passati) {
+    for (const value of risultati_passati) {
       stringa_risultati += value + ' '
     }
   }
@@ -12,7 +12,7 @@ function BoxRisultati(props) {
     <div className='boxRisultati'>
       <h1>Box Risultati</h1>
       <h2>Dadi tirati fino ad ora</h2>
-      <p>{props.risultati_passati.length}</p>
+      <p>{risultati_passati.length}</p>
       <h2>risultati ottenuti fino ad ora</h2>
       <p>{stringa_risultati}</p>
     </div>
