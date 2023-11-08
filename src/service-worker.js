@@ -71,19 +71,3 @@ self.addEventListener('message', (event) => {
 })
 
 // Any other custom service worker logic can go here.
-
-// Check if service worker exists and is supported
-if ('serviceWorker' in navigator) {
-  // Listen for the `controllerchange` event
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
-    // The `controllerchange` event is fired when a new service worker takes control,
-    // so you can show a notification to the user asking them to refresh the page
-    if (
-      window.confirm(
-        'A new version of this app is available. Refresh to update?'
-      )
-    ) {
-      window.location.reload()
-    }
-  })
-}
