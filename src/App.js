@@ -4,11 +4,12 @@ import BoxRisultati from './components/BoxRisultati'
 import Button from './components/Button'
 import DiceContainer from './components/diceContainer'
 function App() {
-  // array contenente il valore dei dadi tirati fino ad ora, da passare a BoxRisultati
+  // array contenente il valore dei dadi tirati fino ad ora, necessario per aggiornare lo stato di BOxRisultati, che è un componente figlio di App.js e sibling di DiceContainer (che è il componente che genera i risultati)
   const [risultatiPassati, setRisultatiPassati] = useState([])
-  // resetta i risultati passati
-  const handleReset = () => {
-    setRisultatiPassati([])
+  console.log('RISULTATI PASSATI in App.js', risultatiPassati)
+  // funzione per resettare i risultati
+  function handleReset() {
+    setRisultatiPassati(null)
   }
 
   return (
@@ -17,11 +18,10 @@ function App() {
       <h1 className='Titolo'>Charismatic Dice Thrower</h1>
       <br></br>
       <DiceContainer
-        onDiceThrow={setRisultatiPassati}
         setRisultatiPassati={setRisultatiPassati}
         risultatiPassati={risultatiPassati}
       />
-      <BoxRisultati risultati_passati={risultatiPassati} />
+      <BoxRisultati risultatiPassati={risultatiPassati} />
       <Button onButtonClick={handleReset}>Reset</Button>
     </div>
   )

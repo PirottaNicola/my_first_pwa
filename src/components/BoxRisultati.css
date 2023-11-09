@@ -5,12 +5,13 @@
     justify-content: center;
     width: 100%;
     background-color: rgb(241, 109, 109);
+    overflow-x: hidden;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: white;
-    margin: 0;
+    margin: 1em 0 0 0;
     padding: 0;
 }
 
@@ -19,4 +20,16 @@ p {
     color: white;
     margin: 0;
     padding: 0;
+}
+
+.historyContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: rgb(241, 109, 109);
+    border-radius: 0.5rem;
+    user-select: none;
+    margin: 1rem auto 1rem auto;
 }

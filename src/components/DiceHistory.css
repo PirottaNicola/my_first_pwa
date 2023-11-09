@@ -1,0 +1,94 @@
+.historyOuterContainer {
+    width: 100%;
+    max-height: 50vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+
+.DiceHistory {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(241, 109, 109);
+    text-align: center;
+    margin: 1rem auto 1rem auto;
+    width: 10rem;
+    height: auto;
+    border-radius: 0.5rem;
+    user-select: none;
+}
+
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    padding: 0.2em 1em 0.2em 1em;
+    margin-bottom: 0.5em;
+    background-color: rgb(243, 75, 75);
+    border-radius: 0.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h3 {
+    color: #f34b4b;
+    font-size: xxx-large;
+    padding: 2rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    margin: 0;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.dice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+div[dicetype="d4"] {
+
+    background-image: url("../images/dices/d4 png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div[dicetype="d6"] {
+
+    background-image: url("../images/dices/d6 png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div[dicetype="d8"] {
+    background-image: url("../images/dices/d8 png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div[dicetype="d10"] {
+    background-image: url("../images/dices/d10 png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div[dicetype="d12"] {
+    background-image: url("../images/dices/d12 png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div[dicetype="d20"] {
+    background-image: url("../images/dices/d20 png.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

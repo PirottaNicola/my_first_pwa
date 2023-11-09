@@ -65,42 +65,42 @@
   }
 }
 
-div[tipo_dado="4"] h3 {
+div[tipoDado="4"] h3 {
   background-image: url("../images/dices/d4 png.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-div[tipo_dado="6"] h3 {
+div[tipoDado="6"] h3 {
   background-image: url("../images/dices/d6 png.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-div[tipo_dado="8"] h3 {
+div[tipoDado="8"] h3 {
   background-image: url("../images/dices/d8 png.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-div[tipo_dado="10"] h3 {
+div[tipoDado="10"] h3 {
   background-image: url("../images/dices/d10 png.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-div[tipo_dado="12"] h3 {
+div[tipoDado="12"] h3 {
   background-image: url("../images/dices/d12 png.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-div[tipo_dado="20"] h3 {
+div[tipoDado="20"] h3 {
   background-image: url("../images/dices/d20 png.png");
   background-size: contain;
   background-repeat: no-repeat;

@@ -1,20 +1,24 @@
 import './BoxRisultati.css'
+import DiceHistory from './DiceHistory'
 
-function BoxRisultati({ risultati_passati }) {
-  // array contenente il valore dei dadi tirati fino ad ora
-  let stringa_risultati = ''
-  if (risultati_passati) {
-    for (const value of risultati_passati) {
-      stringa_risultati += value + ' '
-    }
-  }
+function BoxRisultati({ risultatiPassati }) {
+  const risultatiDaMostrare = risultatiPassati
   return (
     <div className='boxRisultati'>
-      <h1>Box Risultati</h1>
-      <h2>Dadi tirati fino ad ora</h2>
-      <p>{risultati_passati.length}</p>
-      <h2>risultati ottenuti fino ad ora</h2>
-      <p>{stringa_risultati}</p>
+      <h1>
+        Dices rolled: {risultatiDaMostrare ? risultatiDaMostrare.counter : 0}
+      </h1>
+
+      <div className='historyOuterContainer'>
+        <div className='historyContainer'>
+          <DiceHistory pastRolls={risultatiDaMostrare?.[4]} diceType='d4' />
+          <DiceHistory pastRolls={risultatiDaMostrare?.[6]} diceType='d6' />
+          <DiceHistory pastRolls={risultatiDaMostrare?.[8]} diceType='d8' />
+          <DiceHistory pastRolls={risultatiDaMostrare?.[10]} diceType='d10' />
+          <DiceHistory pastRolls={risultatiDaMostrare?.[12]} diceType='d12' />
+          <DiceHistory pastRolls={risultatiDaMostrare?.[20]} diceType='d20' />
+        </div>
+      </div>
     </div>
   )
 }
